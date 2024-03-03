@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="module" src="js/app.js" defer></script>
+    <title>Registro de Actividades</title>
+</head>
+<body>
+    <article class="container text-center">
+        <div class="row align-items-start mt-2 mb-3">
+            <label for="nombreTarea" class="form-label">Nombre de la tarea</label>
+            <input type="text" class="form-control" id="nombreTarea" aria-describedby="emailHelp">
+        </div>
+        <section class="row align-items-start mt-2 mb-3">
+            <div class="col">
+                <label for="fechaInicio" class="form-label">Fecha de inicio</label>
+                <input type="date" class="form-control" id="fechaInicio" aria-describedby="emailHelp">
+            </div>
+            <div class="col">
+                <label for="fechaFin" class="form-label">Fecha de Final</label>
+                <input type="date" class="form-control" id="fechaFin" aria-describedby="emailHelp">
+            </div>
+        </section>
+        <section class="row align-items-start mt-2 mb-3">
+            <label for="importancia" class="form-label">Selecione la importancia</label>
+            <select class="form-select" aria-label="Default select example" id="importancia">
+                <option selected>Importancia</option>
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+            </select>
+        </section>
+        <section class="row align-items-start mt-2 mb-3">
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="cumplida">
+                    <label class="form-check-label" for="cumplida">
+                      Cumplida
+                    </label>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="fallida" checked>
+                    <label class="form-check-label" for="fallida">
+                      Fallida
+                    </label>
+                </div>
+            </div>
+        </section>
+        <button class="btn btn-primary mt-2 mb-3" type="submit">Guardar</button>
+    </article>
+    <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item active" aria-current="true" id="listaCumplida">Cumplida</li>
+              </ul>
+          </div>
+          <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item active" aria-current="true" id="listaFallida">Fallida</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
